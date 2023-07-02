@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="base_pane" prefHeight="558.0" prefWidth="913.0" style="-fx-background-color: #f3f5fc;"
+            stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/13" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.alura.converter.controller.MainMenuController">
+    <Pane fx:id="alura_logo_pane" layoutX="15.0" layoutY="14.0" prefHeight="36.0" prefWidth="43.0"
+          AnchorPane.bottomAnchor="508.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="855.0"
+          AnchorPane.topAnchor="14.0">
+        <ImageView fx:id="alura_logo_image" fitHeight="51.0" fitWidth="51.0" layoutX="12.0" layoutY="3.0"
+                   pickOnBounds="true" preserveRatio="true">
+            <Image url="@../images/alura_logo.png"/>
+        </ImageView>
+    </Pane>
+    <Pane fx:id="background_pane" layoutX="433.0" layoutY="14.0" prefHeight="527.0" prefWidth="466.0"
+          style="-fx-background-color: #FFFFFF;">
+        <Pane fx:id="currency_pane" prefHeight="527.0" prefWidth="472.0" visible="false">
+            <Label fx:id="currency_view_title" layoutX="179.0" layoutY="43.0" text="Currency" textFill="#0a3871">
+                <font>
+                    <Font name="Cantarell Bold" size="28.0"/>
+                </font>
+            </Label>
+            <JFXButton fx:id="currency_convert_button" buttonType="RAISED" layoutX="156.0" layoutY="438.0"
+                       prefHeight="51.0" prefWidth="160.0" text="Convert"/>
+            <JFXTextField fx:id="currency_amount_textfield" layoutX="36.0" layoutY="136.0" prefHeight="42.0"
+                          prefWidth="407.0"/>
+            <Label fx:id="currency_amount_label" layoutX="36.0" layoutY="111.0" text="Amount">
+                <font>
+                    <Font name="Cantarell Regular" size="19.0"/>
+                </font>
+            </Label>
+            <ComboBox fx:id="currency_from_combobox" layoutX="39.0" layoutY="278.0" prefWidth="150.0"/>
+            <ComboBox fx:id="currency_to_combobox" layoutX="294.0" layoutY="278.0" prefWidth="150.0"/>
+            <ImageView fx:id="swap_currencies_image" fitHeight="74.0" fitWidth="84.0" layoutX="199.0" layoutY="255.0"
+                       onMousePressed="#swapComboBoxSelections" pickOnBounds="true" preserveRatio="true"
+                       style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);;">
+                <Image url="@../images/swap_icon.png"/>
+            </ImageView>
+            <Label fx:id="currency_convertion_result_label" layoutX="39.0" layoutY="350.0" prefHeight="61.0"
+                   prefWidth="407.0"/>
+            <Label fx:id="currency_from_label" layoutX="82.0" layoutY="243.0" text="From">
+                <font>
+                    <Font name="Cantarell Regular" size="19.0"/>
+                </font>
+            </Label>
+            <Label fx:id="currency_to_label" layoutX="358.0" layoutY="243.0" text="To">
+                <font>
+                    <Font name="Cantarell Regular" size="19.0"/>
+                </font>
+            </Label>
+        </Pane>
+        <Pane fx:id="temperature_pane" prefHeight="527.0" prefWidth="472.0"
+              stylesheets="@../css/style.css">
+            <Label fx:id="temperature_view_title" layoutX="150.0" layoutY="43.0" style="-fx-text-fill: #0a3871;"
+                   text="Temperature">
+                <font>
+                    <Font name="Cantarell Bold" size="28.0"/>
+                </font>
+            </Label>
+            <JFXButton fx:id="temperature_convert_button" buttonType="RAISED" layoutX="156.0" layoutY="438.0"
+                       prefHeight="51.0" prefWidth="160.0" text="Convert"/>
+            <Label fx:id="temperature_amount_label" layoutX="36.0" layoutY="111.0" text="Amount">
+                <font>
+                    <Font name="Cantarell Regular" size="19.0"/>
+                </font>
+            </Label>
+            <JFXTextField fx:id="temperature_amount_textfield" layoutX="36.0" layoutY="136.0" prefHeight="42.0"
+                          prefWidth="407.0"/>
+            <ComboBox fx:id="temperature_from_combobox" layoutX="39.0" layoutY="278.0" prefWidth="150.0"/>
+            <ComboBox fx:id="temperature_to_combobox" layoutX="294.0" layoutY="278.0" prefWidth="150.0"/>
+            <ImageView fx:id="swap_temperatures_image" fitHeight="74.0" fitWidth="84.0" layoutX="199.0" layoutY="255.0"
+                       onMousePressed="#swapComboBoxSelections" pickOnBounds="true" preserveRatio="true"
+                       style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);">
+                <Image url="@../images/swap_icon.png"/>
+            </ImageView>
+            <Label fx:id="temperature_convertion_result_label" layoutX="39.0" layoutY="350.0" prefHeight="61.0"
+                   prefWidth="407.0"/>
+            <Label fx:id="temperature_from_label" layoutX="82.0" layoutY="243.0" text="From">
+                <font>
+                    <Font name="Cantarell Regular" size="19.0"/>
+                </font>
+            </Label>
+            <Label fx:id="temperature_to_label" layoutX="358.0" layoutY="243.0" text="To">
+                <font>
+                    <Font name="Cantarell Regular" size="19.0"/>
+                </font>
+            </Label>
+        </Pane>
+    </Pane>
+    <Label fx:id="main_view_title" layoutX="66.0" layoutY="93.0" prefHeight="36.0" prefWidth="303.0"
+           style="-fx-text-fill: #0a3871;" text="Alura Converter Challenge" AnchorPane.bottomAnchor="429.0"
+           AnchorPane.leftAnchor="66.0" AnchorPane.rightAnchor="544.0" AnchorPane.topAnchor="93.0">
+        <font>
+            <Font name="Cantarell Bold" size="25.0"/>
+        </font>
+    </Label>
+    <JFXButton fx:id="currency_button" buttonType="RAISED" layoutX="66.0" layoutY="185.0"
+               onMousePressed="#handleUserInteraction" prefHeight="74.0" prefWidth="303.0"
+               text="Currency" textFill="#0a3871" AnchorPane.bottomAnchor="299.0"
+               AnchorPane.leftAnchor="66.0" AnchorPane.rightAnchor="544.0" AnchorPane.topAnchor="185.0"/>
+    <JFXButton fx:id="temperature_button" buttonType="RAISED" layoutX="66.0" layoutY="310.0"
+               onMousePressed="#handleUserInteraction" prefHeight="74.0" prefWidth="303.0"
+               text="Temperature" textFill="#0a3871"/>
+    <Label fx:id="credits_title_label" layoutX="125.0" layoutY="485.0" style="-fx-text-fill: #0a3871;"
+           text="Made with ♥ by Diego Gonzalez">
+        <font>
+            <Font name="Cantarell Bold" size="13.0"/>
+        </font>
+    </Label>
+    <Label fx:id="credits_subtitle_label" layoutX="144.0" layoutY="502.0" text="Oracle ONE Next Education 2023">
+        <font>
+            <Font name="Cantarell Regular" size="10.0"/>
+        </font>
+    </Label>
+</AnchorPane>

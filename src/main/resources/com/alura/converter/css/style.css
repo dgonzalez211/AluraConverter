@@ -1,0 +1,39 @@
+#base_pane {
+    -fx-background-color: #f3f5fc
+}
+
+#temperature_pane, #currency_pane {
+    -fx-background-size: 1200 900;
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-border-width:5;
+    -fx-border-color: #0a3871;
+}
+
+.combo-box,
+.choice-box {
+    -fx-font-size: 12px;
+    -fx-prompt-text-fill: black;
+    -fx-text-fill: black;
+    -fx-background-color: none;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #bdbdbd;
+    -fx-padding: 0 0 3 -8;
+}
+
+.combo-box .list-cell:filled:selected .text,
+.choice-box .list-cell:filled:selected .text {
+    -fx-fill: black;
+}
+
+.combo-box .arrow,
+.choice-box .arrow {
+    -fx-background-color: #4d4d4d;
+}
+
+#currency_button, #currency_convert_button, #temperature_button, #temperature_convert_button {
+    -jfx-button-type: RAISED;
+    -fx-background-color: #0a3871;
+    -fx-text-fill: WHITE;
+    -fx-font-weight: BOLD;
+}
