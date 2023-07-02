@@ -1,4 +1,4 @@
-module com.alura.converter {
+module alura_converter {
     requires javafx.controls;
     requires javafx.base;
     requires javafx.fxml;
